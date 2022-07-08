@@ -5,18 +5,19 @@ function SelectionSort(arr=[]){
         return typeof item === 'number'
     })
     if(!arrayIsNumber) return 'all array elements mut be numbers'
-for(let x=0;x<arr.length-2;x++){
-    let min = x
-    for(let y=x+1;y<arr.length-1;y++){
-        if(arr[y]<arr[min]){
-            min = y
+    console.log(arr.length)
+    for(let x=0;x<arr.length-1;x++){
+        let min = x
+        for(let y=x+1;y<=arr.length-1;y++){
+            if(arr[y]<arr[min]){
+                min = y
+            }
         }
+        let large = arr[x]
+        arr[x] = arr[min]
+        arr[min] = large
     }
-    let large = arr[x]
-    arr[x] = arr[min]
-    arr[min] = large
-}
 
     return arr;
 }
-console.log(SelectionSort([1,3,5]))
+console.log(SelectionSort([1,7,2,4,3,5]))
