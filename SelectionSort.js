@@ -4,7 +4,7 @@ function SelectionSort(arr=[]){
     let arrayIsNumber = arr.every(item=>{
         return typeof item === 'number'
     })
-    if(!arrayIsNumber) return 'all array elements mut be numbers'
+    if(!arrayIsNumber) return 'all array elements must be numbers'
     console.log(arr.length)
     for(let x=0;x<arr.length-1;x++){
         let min = x
